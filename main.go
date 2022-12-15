@@ -2,8 +2,7 @@ package main
 
 import (
 	"flag"
-	"fmt"
-	"src/apiCaller"
+	"FastApiCaller/events/src"
 )
 
 var duration int
@@ -20,7 +19,5 @@ func init() {
 
 func main() {
 	//chamar a funcao que faz a chamada da api
-	apiCallerMainFunction(duration)
+	apiCaller.ApiCallerMainFunction(duration)
 }
-
-	

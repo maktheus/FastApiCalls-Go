@@ -1,7 +1,6 @@
 package apiCaller
 
 import (
-	"flag"
 	"fmt"
 	"sync"
 	"time"
@@ -9,7 +8,7 @@ import (
 )
 
 
-func apiCallerMainFunction(int duration) {
+func ApiCallerMainFunction(duration int) {
 
 	//print o tempo de duracao do script em  00:00:00
 
@@ -52,9 +51,6 @@ func apiCallerMainFunction(int duration) {
 				}else{
 					fmt.Println("Sucesso")
 				}
-
-				
-				
 				// Imprimimos a URL que estamos chamando para mostrar que está funcionando.
 				fmt.Println("Fazendo chamada para:", url)
 			}(url, &wg)

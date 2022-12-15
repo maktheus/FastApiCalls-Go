@@ -1,3 +1,3 @@
-module FastApiCaller
+module FastApiCaller/events
 
 go 1.19
