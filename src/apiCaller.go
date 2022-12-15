@@ -1,4 +1,4 @@
-package ApiCaller
+package apiCaller
 
 import (
 	"flag"
