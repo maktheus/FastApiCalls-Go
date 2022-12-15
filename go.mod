@@ -1,3 +1,3 @@
-module example.com/m
+module FastApiCaller
 
 go 1.19
