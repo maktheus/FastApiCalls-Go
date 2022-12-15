@@ -1,15 +1,33 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"sync"
 	"time"
 	"net/http"
 )
 
+var duration int
+
+func init() {
+
+	// Definimos a flag "duration" para o tempo de execução do script em segundos.
+	flag.IntVar(&duration, "d", 60, "tempo de execução do script em segundos")
+
+	// Analisamos as flags.
+	flag.Parse()
+}
+
 func main() {
-	// tempo de execução do script em segundos
-	duration:= 60
+
+	//print o tempo de duracao do script em  00:00:00
+
+	var tempoTotal =   time.Duration(duration) * time.Second 
+
+	fmt.Println("Tempo de execução do script: ", tempoTotal)
+	
+	
 	endTime := time.Now().Add(time.Duration(duration) * time.Second)
 
 	// Criamos um grupo de espera para garantir que todas as threads
@@ -44,6 +62,8 @@ func main() {
 				}else{
 					fmt.Println("Sucesso")
 				}
+
+				
 				
 				// Imprimimos a URL que estamos chamando para mostrar que está funcionando.
 				fmt.Println("Fazendo chamada para:", url)
