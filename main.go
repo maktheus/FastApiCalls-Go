@@ -14,8 +14,8 @@ func init() {
 	// Definimos a flag "duration" para o tempo de execução do script em segundos.
 	flag.IntVar(&duration, "d", 60, "tempo de execução do script em segundos")
 
-// Definimos a flag "urls" para as URLs da API.
-flag.StringArrayVar(&urls, "u", []string{"https://api.github.com/users/brunocarvalho"}, "URLs da API")
+	// Definimos a flag "urls" para as URLs da API.
+	flag.StringArrayVar(&urls, "u", []string{"https://api.github.com/users/brunocarvalho"}, "URLs da API")
 
 	// Analisamos as flags.
 	flag.Parse()

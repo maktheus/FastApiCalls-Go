@@ -38,14 +38,15 @@ func ApiCallerMainFunction(duration int, urls []string) {
 				// Quando a thread for finalizada, removemos uma unidade do contador no grupo de espera.
 				defer wg.Done()
 				
-				// Aqui, você pode colocar o código para fazer a chamada API.
-				// Por exemplo, você pode usar o pacote "http" do Go para fazer a chamada.
-				_, err := http.Get(url)
+				
+				res, err := http.Get(url)
+
 				if err != nil {
 					fmt.Println(err)
 				}else{
-					fmt.Println("Sucesso")
+					fmt.Println(res)
 				}
+
 				// Imprimimos a URL que estamos chamando para mostrar que está funcionando.
 				fmt.Println("Fazendo chamada para:", url)
 			}(url, &wg)
