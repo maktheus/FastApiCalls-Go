@@ -1,6 +1,3 @@
-Sure! Here is a sample README file for your Go project:
-
-Copy code
 # Fast API Caller
 
 This project is a Go application that makes API calls in threads to improve performance.
@@ -49,6 +46,30 @@ You can also specify command-line flags when running the executable file. For ex
 ```
 ./[executable_filename] -d 120
 ```
+
+## Runing the executable file
+
+Inside bin folder you will find the executable file. You can run it by typing the following command:
+
+```
+./events
+```
+
+## Running the tests
+
+To run the tests for this project, run the following command:
+
+```
+go test
+```
+
+## Built With
+
+- [Go](https://golang.org/) - The programming language used
+
+## Authors
+
+- **Maktheus** - _Initial work_ - [Maktheus]( 
 
 ## Contributing
 
