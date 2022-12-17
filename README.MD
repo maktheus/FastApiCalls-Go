@@ -15,33 +15,40 @@ To get started with this project, follow these steps:
 
 1. Clone the repository:
 
+```
 git clone https://github.com/maktheus/FastApiCalls-Go
+```
 
 Copy code
 
 2. Navigate to the project directory:
 
+```
 cd FastApiCaller
+```
 
 Copy code
 
 3. Build the project:
 
+```
 go build
+```
 
 Copy code
 
 This will create an executable file for the project.
 
 4. Run the executable file:
-
+```
 ./[executable_filename]
-
+```
 
 You can also specify command-line flags when running the executable file. For example, to set the duration flag to 120 seconds, you can run the following command:
 
+```
 ./[executable_filename] -d 120
-
+```
 
 ## Contributing
 
