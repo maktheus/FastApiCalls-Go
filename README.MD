@@ -47,6 +47,13 @@ You can also specify command-line flags when running the executable file. For ex
 ./[executable_filename] -d 120
 ```
 
+add url flag
+
+```
+./[executable_filename]  -u https://www.google.com
+```
+
+
 ## Runing the executable file
 
 Inside bin folder you will find the executable file. You can run it by typing the following command:

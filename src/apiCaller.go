@@ -8,7 +8,7 @@ import (
 )
 
 
-func ApiCallerMainFunction(duration int) {
+func ApiCallerMainFunction(duration int, urls []string) {
 
 	//print o tempo de duracao do script em  00:00:00
 
@@ -23,12 +23,7 @@ func ApiCallerMainFunction(duration int) {
 	// sejam concluídas antes de terminarmos o programa.
 	var wg sync.WaitGroup
 
-	// Criamos um slice de URLs que queremos chamar.
-	urls := []string{
-		"http://example.com/api/v1/foo",
-		"http://example.com/api/v1/bar",
-		"http://example.com/api/v1/baz",
-	}
+	// Vamos percorrer cada URL e criar uma thread para fazer a chamada.
 
 	for time.Now().Before(endTime){
 

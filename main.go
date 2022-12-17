@@ -23,5 +23,5 @@ flag.StringArrayVar(&urls, "u", []string{"https://api.github.com/users/brunocarv
 
 func main() {
 	//chamar a funcao que faz a chamada da api
-	apiCaller.ApiCallerMainFunction(duration)
+	apiCaller.ApiCallerMainFunction(duration, urls)
 }
