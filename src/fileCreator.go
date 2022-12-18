@@ -9,6 +9,7 @@ type ApiResult struct {
 	Url         string `json:"url"`
 	Success     bool   `json:"success"`
 	ErrorMessage string `json:"errorMessage,omitempty"`
+	Response     map[string]interface{} `json:"response,omitempty"`
 }
 
 func FileJsonCreator(Result []ApiResult) {

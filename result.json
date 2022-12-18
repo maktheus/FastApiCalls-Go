@@ -1,0 +1,32 @@
+[
+ {
+  "url": "https://jsonplaceholder.typicode.com/todos/1",
+  "success": true,
+  "response": {
+   "completed": false,
+   "id": 1,
+   "title": "delectus aut autem",
+   "userId": 1
+  }
+ },
+ {
+  "url": "https://jsonplaceholder.typicode.com/todos/1",
+  "success": true,
+  "response": {
+   "completed": false,
+   "id": 1,
+   "title": "delectus aut autem",
+   "userId": 1
+  }
+ },
+ {
+  "url": "https://jsonplaceholder.typicode.com/todos/1",
+  "success": true,
+  "response": {
+   "completed": false,
+   "id": 1,
+   "title": "delectus aut autem",
+   "userId": 1
+  }
+ }
+]
