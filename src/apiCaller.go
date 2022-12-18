@@ -8,7 +8,16 @@ import (
 )
 
 
-func ApiCallerMainFunction(duration int, urls []string) {
+func ApiCallerMainFunction(duration int, urls []string)  {
+
+	if duration <= 0 {
+		fmt.Println("O tempo de execução do script deve ser maior que 0")
+		return
+	}
+	if len(urls) == 0 {
+		fmt.Println("É necessário informar pelo menos uma URL")
+		return
+	}
 
 	//print o tempo de duracao do script em  00:00:00
 

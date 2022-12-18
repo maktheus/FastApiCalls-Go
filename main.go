@@ -6,7 +6,8 @@ import (
 )
 
 var duration int
-var url := []string;
+var urls []string = make([]string, 0)
+var file string
 
 
 func init() {
@@ -16,6 +17,9 @@ func init() {
 
 	// Definimos a flag "urls" para as URLs da API.
 	flag.StringArrayVar(&urls, "u", []string{"https://api.github.com/users/brunocarvalho"}, "URLs da API")
+
+	// Definimos a flag "file" para o tipo de arquivo que será gerado.
+	flag.StringVar(&file, "f", "json", "tipo de arquivo que será gerado")
 
 	// Analisamos as flags.
 	flag.Parse()

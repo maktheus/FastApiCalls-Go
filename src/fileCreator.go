@@ -1,10 +1,8 @@
 package apiCaller
 
 import (
-	"fmt"
-	"sync"
-	"time"
-	"net/http"
+	"encoding/json"
+	"io/ioutil"
 )
 
 type ApiResult struct {
@@ -14,6 +12,7 @@ type ApiResult struct {
 }
 
 func FileJsonCreator(Result []ApiResult) {
+
 	file, _ := json.MarshalIndent(Result, "", " ")
 	_ = ioutil.WriteFile("result.json", file, 0644)
 }
