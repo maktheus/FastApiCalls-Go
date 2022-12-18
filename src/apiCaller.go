@@ -8,7 +8,7 @@ import (
 )
 
 
-func ApiCallerMainFunction(duration int, urls []string)  {
+func ApiCallerMainFunction(duration int, urls []string, file string)  {
 
 	if duration <= 0 {
 		fmt.Println("O tempo de execução do script deve ser maior que 0")
@@ -53,7 +53,17 @@ func ApiCallerMainFunction(duration int, urls []string)  {
 				if err != nil {
 					fmt.Println(err)
 				}else{
-					fmt.Println(res)
+					//switch case para o tipo de arquivo que será gerado
+					switch file {
+						case "json":
+							fmt.Println("json")
+						case "txt":
+							fmt.Println("txt")
+						case "csv":
+							fmt.Println("csv")
+						default:
+							fmt.Println("json")
+					}
 				}
 
 				// Imprimimos a URL que estamos chamando para mostrar que está funcionando.
