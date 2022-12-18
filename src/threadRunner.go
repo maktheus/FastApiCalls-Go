@@ -46,12 +46,12 @@ func ApiCallerMainFunction(duration int, urls []string, file string)  {
 				// Quando a thread for finalizada, removemos uma unidade do contador no grupo de espera.
 				defer wg.Done()
 				
-				byte, err := makeRequest(url)
+				response, err := MakeRequest(url)
 				if err != nil {
 					fmt.Println(err)
 				}
 				var apiResult ApiResult
-				err = json.Unmarshal(byte, &apiResult)
+				err = json.Unmarshal(response, &apiResult)
 				if err != nil {
 					fmt.Println(err)
 				}

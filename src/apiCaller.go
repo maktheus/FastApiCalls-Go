@@ -6,7 +6,7 @@ import (
 )
 
 
-func makeRequest(url string) ([]byte, error) {
+func MakeRequest(url string) ([]byte, error) {
 	res, err := http.Get(url)
 	if err != nil {
 		apiResult := ApiResult{Url: url, Success: false, ErrorMessage: err.Error()}
@@ -25,6 +25,7 @@ func makeRequest(url string) ([]byte, error) {
 		apiResult := ApiResult{Url: url, Success: false, ErrorMessage: err.Error()}
 		return json.Marshal(apiResult)
 	}
+
 	result.Response = responseJson
 	return json.Marshal(result)
 }

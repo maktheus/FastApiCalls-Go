@@ -54,6 +54,38 @@ add url flag
 ./[executable_filename]  -u https://www.google.com
 ```
 
+change file type
+
+```
+./[executable_filename]  -f json
+```
+
+change file name
+
+```
+./[executable_filename]  -n myFile
+```
+
+##Type of files
+
+```
+./[executable_filename]  -f json
+```
+
+```
+./[executable_filename]  -f csv
+```
+
+```
+./[executable_filename]  -f xml
+```
+
+```
+./[executable_filename]  -f txt
+```
+
+
+
 
 ## Runing the executable file
 
@@ -66,6 +98,10 @@ Inside bin folder you will find the executable file. You can run it by typing th
 ## Running the tests
 
 To run the tests for this project, run the following command:
+
+```
+cd tests
+```
 
 ```
 go test
