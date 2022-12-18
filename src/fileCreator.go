@@ -12,24 +12,24 @@ type ApiResult struct {
 	Response     map[string]interface{} `json:"response,omitempty"`
 }
 
-func FileJsonCreator(Result []ApiResult) {
+func FileJsonCreator(Result []ApiResult,name string) {
 
 	file, _ := json.MarshalIndent(Result, "", " ")
-	_ = ioutil.WriteFile("result.json", file, 0644)
+	_ = ioutil.WriteFile(name+".json", file, 0644)
 }
 
-func FileTxtCreator(Result []ApiResult) {
+func FileTxtCreator(Result []ApiResult,name string) {
 	file, _ := json.MarshalIndent(Result, "", " ")
-	_ = ioutil.WriteFile("result.txt", file, 0644)
+	_ = ioutil.WriteFile(name+".json", file, 0644)
 }
 
-func FileCsvCreator(Result []ApiResult) {
+func FileCsvCreator(Result []ApiResult,name string) {
 	file, _ := json.MarshalIndent(Result, "", " ")
-	_ = ioutil.WriteFile("result.csv", file, 0644)
+	_ = ioutil.WriteFile(name+".json", file, 0644)
 }
 
-func FileXlsxCreator(Result []ApiResult) {
+func FileXlsxCreator(Result []ApiResult,name string) {
 	file, _ := json.MarshalIndent(Result, "", " ")
-	_ = ioutil.WriteFile("result.xlsx", file, 0644)
+	_ = ioutil.WriteFile(name+".json", file, 0644)
 }
 

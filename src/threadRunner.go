@@ -8,7 +8,7 @@ import (
 )
 
 
-func ApiCallerMainFunction(duration int, urls []string, file string)  {
+func ApiCallerMainFunction(duration int, urls []string, file string, name string)  {
 	
 	var Result []ApiResult
 
@@ -69,16 +69,16 @@ func ApiCallerMainFunction(duration int, urls []string, file string)  {
 	switch file {
 	case "json":
 		//chama a funcao que gera o arquivo json
-		FileJsonCreator(Result)
+		FileJsonCreator(Result,name)
 	case "csv":
 		//chama a funcao que gera o arquivo csv
-		FileCsvCreator(Result)
+		FileCsvCreator(Result,name)
 	case "xlsx":
 		//chama a funcao que gera o arquivo xml
-		FileXlsxCreator(Result)
+		FileXlsxCreator(Result,name)
 	case "txt":
 		//chama a funcao que gera o arquivo txt
-		FileTxtCreator(Result)
+		FileTxtCreator(Result,name)
 	default:
 		fmt.Println("Tipo de arquivo inválido")
 	}
