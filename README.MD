@@ -66,7 +66,7 @@ change file name
 ./[executable_filename]  -n myFile
 ```
 
-##Type of files
+## Type of files
 
 ```
 ./[executable_filename]  -f json

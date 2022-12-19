@@ -19,7 +19,6 @@ func TestMakeRequest(t *testing.T) {
 	if err != nil {
 		t.Error("Error making request:", err)
 	}
-	
 	var apiResult ApiResult
 	err = json.Unmarshal(response, &apiResult)
 	if err != nil {
